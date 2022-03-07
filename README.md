@@ -1,0 +1,2 @@
+# shell
+Linux svašta-nešta
