@@ -1,2 +1,2 @@
 # shell
-Linux svašta-nešta
+Ovdje se nalaze moje cPanel, DirectAdmin i "čisti" Linux skripte
