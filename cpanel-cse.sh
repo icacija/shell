@@ -6,3 +6,5 @@ tar -xzf cse.tgz
 cd cse
 sh install.sh
 rm -Rfv /usr/src/cse*
+rm -Rfv /root/cpanel-cse.sh
+echo -e "All done - thx"
