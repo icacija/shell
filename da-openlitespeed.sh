@@ -1,4 +1,5 @@
 # /bin/sh
+cd /usr/local/directadmin/custombuild
 ./build update
 ./build set webserver openlitespeed
 ./build set mod_ruid2 no
