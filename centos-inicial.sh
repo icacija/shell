@@ -21,4 +21,4 @@ timedatectl set-timezone Europe/Zagreb
 echo -e "Done for now \nPlease reboot"
 
 echo -e "clean-up"
-rm -rf centos-inicial.sh 
+rm -rf centos-inicial.sh
