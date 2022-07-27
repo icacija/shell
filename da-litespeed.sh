@@ -8,3 +8,4 @@ cd /usr/local/directadmin/custombuild
 ./build set php4_mode lsphp
 ./build litespeed
 ./build php n
+./build rewrite_confs
