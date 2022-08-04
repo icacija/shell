@@ -15,6 +15,11 @@ echo $script64 | base64 -d >> $bashrc
 echo -e "Change timezone to Europe/Zagreb"
 timedatectl set-timezone Europe/Zagreb
 
+echo -e "EPEL"
+yum install epel-release -y
+
+echo -e "HTOP & VNSTAT" 
+yum install htop vnstat -y
 
 echo -e "Done for now \nPlease reboot"
 
