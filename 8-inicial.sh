@@ -4,6 +4,10 @@ echo -e "Disable selinux"
 sudo sed -i 's/enforcing/disabled/g' /etc/selinux/config /etc/selinux/config
 sudo sestatus
 
+echo -e "Disable firewall"
+systemctl stop firewalld
+systemctl disable firewalld
+
 echo -e "Change SSH port to 9001"
 echo "Port 9001" >> /etc/ssh/sshd_config
 
