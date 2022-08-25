@@ -28,6 +28,6 @@ dnf install htop vnstat -y
 echo -e "Done for now \nPlease reboot"
 
 echo -e "clean-up"
-rm -rf centos-inicial.sh
+rm -rf 8-inicial.sh
 
 bash
