@@ -22,8 +22,8 @@ timedatectl set-timezone Europe/Zagreb
 echo -e "EPEL"
 dnf install epel-release -y
 
-echo -e "HTOP & VNSTAT & FTP & NANO" 
-dnf install htop vnstat ftp nano -y
+echo -e "HTOP & VNSTAT & FTP & NANO & SCREEN" 
+dnf install htop vnstat ftp nano screen -y
 
 echo -e "Done for now \nPlease reboot"
 
