@@ -1,5 +1,8 @@
 # /bin/bash
 
+#Get script path
+SCRIPT=$(readlink -f "$0")
+
 echo -e "CSF Install"
 
 cd /usr/src
@@ -27,4 +30,5 @@ cd cse
 sh install.sh
 rm -Rfv /usr/src/cse*
 
-rm -rf cpanel-postinstall.sh
+echo -e "Clean up"
+rm -rf "$SCRIPT"
