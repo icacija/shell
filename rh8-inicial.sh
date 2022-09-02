@@ -1,5 +1,8 @@
 # /bin/bash
 
+#Get script path
+SCRIPT=$(readlink -f "$0")
+
 echo -e "Disable selinux"
 sudo sed -i 's/enforcing/disabled/g' /etc/selinux/config /etc/selinux/config
 sudo sestatus
@@ -27,7 +30,7 @@ dnf install htop vnstat ftp nano screen -y
 
 echo -e "Done for now \nPlease reboot"
 
-echo -e "clean-up"
-rm -rf 8-inicial.sh
+echo -e "Clean up"
+rm -rf "$SCRIPT"
 
 bash
