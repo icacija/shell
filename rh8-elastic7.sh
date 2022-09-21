@@ -9,9 +9,9 @@ rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch -y
 touch /etc/yum.repos.d/elasticsearch.repo
 
 echo -e "Repo"
-echo "[elasticsearch-8.x]" >> /etc/yum.repos.d/elasticsearch.repo
-echo "name=Elasticsearch repository for 8.x packages" >> /etc/yum.repos.d/elasticsearch.repo
-echo "baseurl=https://artifacts.elastic.co/packages/8.x/yum" >> /etc/yum.repos.d/elasticsearch.repo
+echo "[elasticsearch-7.x]" >> /etc/yum.repos.d/elasticsearch.repo
+echo "name=Elasticsearch repository for 7.x packages" >> /etc/yum.repos.d/elasticsearch.repo
+echo "baseurl=https://artifacts.elastic.co/packages/7.x/yum" >> /etc/yum.repos.d/elasticsearch.repo
 echo "gpgcheck=1" >> /etc/yum.repos.d/elasticsearch.repo
 echo "gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch" >> /etc/yum.repos.d/elasticsearch.repo
 echo "autorefresh=1" >> /etc/yum.repos.d/elasticsearch.repo
@@ -23,8 +23,8 @@ systemctl start elasticsearch
 systemctl enable elasticsearch
 
 echo -e "config variables"
-# echo "transport.host: localhost" >> /etc/elasticsearch/elasticsearch.yml
-# echo "transport.tcp.port: 9300" >> /etc/elasticsearch/elasticsearch.yml
+echo "transport.host: localhost" >> /etc/elasticsearch/elasticsearch.yml
+echo "transport.tcp.port: 9300" >> /etc/elasticsearch/elasticsearch.yml
 echo "http.port: 9200" >> /etc/elasticsearch/elasticsearch.yml
 echo "network.host: 0.0.0.0" >> /etc/elasticsearch/elasticsearch.yml
 
