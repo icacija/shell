@@ -23,8 +23,8 @@ systemctl start elasticsearch
 systemctl enable elasticsearch
 
 echo -e "config variables"
-echo "transport.host: localhost" >> /etc/elasticsearch/elasticsearch.yml
-echo "transport.tcp.port: 9300" >> /etc/elasticsearch/elasticsearch.yml
+# echo "transport.host: localhost" >> /etc/elasticsearch/elasticsearch.yml
+# echo "transport.tcp.port: 9300" >> /etc/elasticsearch/elasticsearch.yml
 echo "http.port: 9200" >> /etc/elasticsearch/elasticsearch.yml
 echo "network.host: 0.0.0.0" >> /etc/elasticsearch/elasticsearch.yml
 
