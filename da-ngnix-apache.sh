@@ -1,3 +1,8 @@
+# /bin/bash
+
+#Get script path
+SCRIPT=$(readlink -f "$0")
+
 cd /usr/local/directadmin/custombuild
 ./build update
 ./build update_da
@@ -9,3 +14,8 @@ cd /usr/local/directadmin/custombuild
 ./build nginx_apache
 ./build php n
 ./build rewrite_confs
+
+echo -e "Clean up"
+rm -rf "$SCRIPT"
+
+bash
