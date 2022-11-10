@@ -1,4 +1,8 @@
 # /bin/bash
+
+#Get script path
+SCRIPT=$(readlink -f "$0")
+
 echo -e "PMA"
 
 cd /usr/local/directadmin/
@@ -26,4 +30,7 @@ cd custombuild
 
 echo -e "Done"
 
-rm -rf da_autologin.sh
+echo -e "Clean up"
+rm -rf "$SCRIPT"
+
+bash
