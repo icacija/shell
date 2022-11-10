@@ -18,4 +18,4 @@ cd /usr/local/directadmin/custombuild
 echo -e "Clean up"
 rm -rf "$SCRIPT"
 
-bash
+cd
