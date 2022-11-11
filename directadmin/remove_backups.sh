@@ -5,7 +5,7 @@ backup_time="1" # Remove backups how many days old? Number variable only!
 
 #### Commands ####
 
-find_files=`find $backup_directory -maxdepth +1 -mtime +$backup_time`
+find_files="find $backup_directory -maxdepth +1 -mtime +$backup_time"
 
 #### Begin Script ####
 
@@ -20,7 +20,7 @@ fi
 echo "----"
 echo ""
 echo "If any folders were found they have deleted."
-find $backup_directory -mtime +$backup_time -exec rm -rf {} +
+# find $backup_directory -mtime +$backup_time -exec rm -rf {} +
 echo ""
 echo "Done."
 echo ""
