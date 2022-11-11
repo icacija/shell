@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Script path /usr/local/directadmin/scripts/custom/user_backup_post.sh
-# Chmod 777 needed
+# chmod 755 /usr/local/directadmin/scripts/custom/user_backup_post.sh
 
 #set reseller
 RESELLER=admin
