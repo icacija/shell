@@ -20,7 +20,7 @@ fi
 echo "----"
 echo ""
 echo "If any folders were found they have deleted."
-find $backup_directory -mtime +$backup_time -delete
+find $backup_directory -mtime +$backup_time -exec rm -rf {} +
 echo ""
 echo "Done."
 echo ""
