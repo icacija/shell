@@ -5,4 +5,4 @@ backup_time="1" # Remove backups how many days old? Number variable only!
 
 
 # find $backup_directory -mtime +$backup_time -exec rm -rf {} +
-find $backup_directory -mtime +$backup_time
+find $backup_directory -maxdepth 1 -mtime $backup_time
