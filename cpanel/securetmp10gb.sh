@@ -172,7 +172,7 @@ my $tmpopts      = '';
 my $vartmpopts   = '';
 my $mountkeyword = '';
 my $cpflags      = '';
-my $tmpdsksize   = 512000;    # Must be larger than 250000
+my $tmpdsksize   = 10485760;    # 10G / Can be additional edited
 
 $mountkeyword = 'remount';
 $cpflags      = '-af';
@@ -219,14 +219,16 @@ if ( !$tmpmnt ) {
     my $mount_point = Cpanel::Filesys::FindParse::find_mount( $filesys, '/usr/tmpDSK' );
 
     my $available                 = $partition_map->{$mount_point};
-    my $five_percent_of_available = ( $available * 0.05 );
-    if ( $five_percent_of_available > $tmpdsksize ) {
-        $tmpdsksize = $five_percent_of_available;
-    }
-    my $FOUR_GIG_k = ( 1024 * 1024 * 4 );
-    if ( $tmpdsksize > $FOUR_GIG_k ) {
-        $tmpdsksize = $FOUR_GIG_k;
-    }
+    
+    
+#    my $five_percent_of_available = ( $available * 0.05 );
+#    if ( $five_percent_of_available > $tmpdsksize ) {
+#        $tmpdsksize = $five_percent_of_available;
+#    }
+#    my $FOUR_GIG_k = ( 1024 * 1024 * 4 );
+#    if ( $tmpdsksize > $FOUR_GIG_k ) {
+#        $tmpdsksize = $FOUR_GIG_k;
+#    }
 
     $tmpdsksize = int($tmpdsksize);
     $tmpdsksize = $tmpdsksize - ( $tmpdsksize % 1024 );
