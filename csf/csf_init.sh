@@ -27,3 +27,8 @@ sed -i 's/CT_EMAIL_ALERT = "1"/CT_EMAIL_ALERT = "0"/g' /etc/csf/csf.conf
 
 # restart
 systemctl restart csf
+csf -r
+
+# Clean UP
+echo -e "Clean up"
+rm -rf "$SCRIPT"
