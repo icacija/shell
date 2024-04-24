@@ -30,5 +30,5 @@ systemctl restart csf
 csf -r
 
 # Clean UP
-echo -e "Clean up"
+echo -e "Clean up csf_init.sh"
 rm -rf "$SCRIPT"
