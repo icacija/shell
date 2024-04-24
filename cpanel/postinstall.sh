@@ -30,5 +30,9 @@ cd cse
 sh install.sh
 rm -Rfv /usr/src/cse*
 
+# CSF Conf
+wget https://raw.githubusercontent.com/icacija/shell/main/csf/csf_init.sh
+bash csf_init.sh
+
 echo -e "Clean up"
 rm -rf "$SCRIPT"
