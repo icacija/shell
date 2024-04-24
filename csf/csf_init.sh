@@ -1,5 +1,8 @@
 #! /bin/bash
 
+#Get script path
+SCRIPT=$(readlink -f "$0")
+
 #osnovno
 sed -i 's/TESTING = "1"/TESTING = "0"/g' /etc/csf/csf.conf
 sed -i 's/RESTRICT_SYSLOG = "0"/RESTRICT_SYSLOG = "3"/g' /etc/csf/csf.conf
