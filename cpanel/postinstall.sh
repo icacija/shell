@@ -31,6 +31,7 @@ sh install.sh
 rm -Rfv /usr/src/cse*
 
 # CSF Conf
+cd /root
 wget https://raw.githubusercontent.com/icacija/shell/main/csf/csf_init.sh
 bash csf_init.sh
 
