@@ -73,7 +73,7 @@ echo "Starting and enabling Redis service..."
 systemctl start redis
 systemctl enable redis
 
-# 3. Install Opcache, Fileinfo, Imagemagick extensions
+# 3. Install Opcache, Fileinfo, Imagemagick, Redis extensions
 
 echo "Installing Opcache..."
 /usr/local/cpanel/scripts/phpextensionmgr install opcache
@@ -87,11 +87,15 @@ yum install -y ImageMagick ImageMagick-devel
 echo "Installing Imagick..."
 /opt/cpanel/ea-php74/root/usr/bin/pecl install imagick
 
+echo "Installing Redis..."
+/opt/cpanel/ea-php74/root/usr/bin/pecl install redis
+
 # Enable the installed extensions in php.ini
 echo "Enabling extensions in php.ini..."
 echo "extension=opcache.so" >> /opt/cpanel/ea-php74/root/etc/php.ini
 echo "extension=fileinfo.so" >> /opt/cpanel/ea-php74/root/etc/php.ini
 echo "extension=imagick.so" >> /opt/cpanel/ea-php74/root/etc/php.ini
+echo "extension=redis.so" >> /opt/cpanel/ea-php74/root/etc/php.ini
 
 # Restart Apache to apply changes
 echo "Restarting Apache..."
