@@ -46,6 +46,7 @@ update_config "max_execution_time" "300"
 update_config "disable_functions" "exec,system,passthru,shell_exec,dl,show_source,posix_kill,posix_mkfifo,posix_getpwuid,posix_setpgid,posix_setsid,posix_setuid,posix_setgid,posix_seteuid,posix_setegid,posix_uname"
 update_config "session.cookie_samesite" "Lax"
 update_config "session.cookie_secure" "1"
+update_config "date.timezone" "Europe/Zagreb"
 
 # Ensure cPanel scripts are up-to-date
 /usr/local/cpanel/scripts/upcp
@@ -75,8 +76,8 @@ systemctl enable redis
 
 # 3. Install Opcache, Fileinfo, Imagemagick, Redis extensions
 
-echo "Installing Opcache and Fileinfo"
-yum install ea-php74-php-opcache ea-php74-php-fileinfo
+echo "Installing Opcache, Fileinfo and Soap"
+yum install ea-php74-php-opcache ea-php74-php-fileinfo ea-php74-php-soap
 
 echo "Installing Imagick dependencies..."
 yum install -y ImageMagick ImageMagick-devel
