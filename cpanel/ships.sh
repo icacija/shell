@@ -75,11 +75,8 @@ systemctl enable redis
 
 # 3. Install Opcache, Fileinfo, Imagemagick, Redis extensions
 
-echo "Installing Opcache..."
-/usr/local/cpanel/scripts/phpextensionmgr install opcache
-
-echo "Installing Fileinfo..."
-/usr/local/cpanel/scripts/phpextensionmgr install fileinfo
+echo "Installing Opcache and Fileinfo"
+yum install ea-php74-php-opcache ea-php74-php-fileinfo
 
 echo "Installing Imagick dependencies..."
 yum install -y ImageMagick ImageMagick-devel
