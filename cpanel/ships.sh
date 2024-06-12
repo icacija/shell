@@ -105,7 +105,7 @@ echo "Restarting Apache..."
 
 # Install necessary dependencies
 echo "Installing dependencies for Composer..."
-yum install -y curl wget php-cli php-zip unzip
+# yum install -y curl wget php-cli php-zip unzip
 
 # Download and install Composer
 echo "Downloading and installing Composer..."
