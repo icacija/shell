@@ -87,22 +87,11 @@ echo "Installing Imagick..."
 echo "Installing Redis..."
 /opt/cpanel/ea-php74/root/usr/bin/pecl install redis
 
-# Enable the installed extensions in php.ini
-# echo "Enabling extensions in php.ini..."
-# echo "extension=opcache.so" >> /opt/cpanel/ea-php74/root/etc/php.ini
-# echo "extension=fileinfo.so" >> /opt/cpanel/ea-php74/root/etc/php.ini
-# echo "extension=imagick.so" >> /opt/cpanel/ea-php74/root/etc/php.ini
-# echo "extension=redis.so" >> /opt/cpanel/ea-php74/root/etc/php.ini
-
 # Restart Apache to apply changes
 echo "Restarting Apache..."
-/usr/local/cpanel/scripts/restartsrv_httpd
+systemctl restart httpd
 
 # 4. Install Composer and update to version 1
-
-# Install necessary dependencies
-echo "Installing dependencies for Composer..."
-# yum install -y curl wget php-cli php-zip unzip
 
 # Download and install Composer
 echo "Downloading and installing Composer..."
