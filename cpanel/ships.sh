@@ -43,7 +43,7 @@ update_config "upload_max_filesize" "500M"
 update_config "max_input_vars" "10000"
 update_config "max_input_time" "600"
 update_config "max_execution_time" "300"
-update_config "disable_functions" "exec,system,passthru,shell_exec,dl,popen,show_source,posix_kill,posix_mkfifo,posix_getpwuid,posix_setpgid,posix_setsid,posix_setuid,posix_setgid,posix_seteuid,posix_setegid,posix_uname"
+update_config "disable_functions" "exec,system,passthru,shell_exec,dl,show_source,posix_kill,posix_mkfifo,posix_getpwuid,posix_setpgid,posix_setsid,posix_setuid,posix_setgid,posix_seteuid,posix_setegid,posix_uname"
 update_config "session.cookie_samesite" "Lax"
 update_config "session.cookie_secure" "1"
 
