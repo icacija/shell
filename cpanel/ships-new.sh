@@ -16,7 +16,7 @@ dnf config-manager --set-enabled epel
 
 # 1. Update php.ini with specified values
 
-PHPINI_PATH="/opt/cpanel/ea-php74/root/etc/php.ini"
+PHPINI_PATH="/opt/cpanel/ea-php83/root/etc/php.ini"
 
 # Backup the original php.ini file
 cp $PHPINI_PATH ${PHPINI_PATH}.backup
