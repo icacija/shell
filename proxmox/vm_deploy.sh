@@ -8,8 +8,8 @@ CORES=2                # Number of CPU cores
 STORAGE="local-zfs"    # Storage location
 
 # URLs for cloud images
-ALMALINUX_9_URL="https://repo.almalinux.org/almalinux/9/cloud/x86_64/images/AlmaLinux-9-GenericCloud-9.4-20240507.x86_64.qcow2"
-ALMALINUX_8_URL="https://repo.almalinux.org/almalinux/8/cloud/x86_64/images/AlmaLinux-8-GenericCloud-8.10-20240530.x86_64.qcow2"
+ALMALINUX_9_URL="https://repo.almalinux.org/almalinux/9/cloud/x86_64/images/AlmaLinux-9-GenericCloud-latest.x86_64.qcow2 "
+ALMALINUX_8_URL="https://repo.almalinux.org/almalinux/8/cloud/x86_64/images/AlmaLinux-8-GenericCloud-latest.x86_64.qcow2 "
 UBUNTU_2204_URL="https://cloud-images.ubuntu.com/releases/jammy/release/ubuntu-22.04-server-cloudimg-amd64.img"
 
 # Get user inputs for the VM type, VLAN ID, IP address, and gateway
@@ -45,7 +45,7 @@ qm create $VMID --name $VM_NAME --memory $MEMORY --net0 virtio,bridge=$BRIDGE,ta
 qm importdisk $VMID /var/lib/vz/template/qcow2/${VM_NAME}.qcow2 $STORAGE
 
 # Configure the VM
-qm set $VMID --scsihw virtio-scsi-pci --virtio0 $STORAGE:vm-$VMID-disk-0
+qm set $VMID --scsihw virtio-scsi-pci --scsi0 $STORAGE:vm-$VMID-disk-0
 qm set $VMID --boot c --bootdisk scsi0
 qm set $VMID --ide2 $STORAGE:cloudinit
 qm set $VMID --serial0 socket --vga serial0
