@@ -8,10 +8,10 @@ CORES=2                # Number of CPU cores
 STORAGE="local-zfs"    # Storage location
 
 # URLs for cloud images
-ALMALINUX_9_URL="https://repo.almalinux.org/almalinux/9/cloud/x86_64/images/AlmaLinux-9-GenericCloud-latest.x86_64.qcow2"
-ALMALINUX_8_URL="https://repo.almalinux.org/almalinux/8/cloud/x86_64/images/AlmaLinux-8-GenericCloud-latest.x86_64.qcow2"
-UBUNTU_2204_URL="https://cloud-images.ubuntu.com/releases/jammy/release/ubuntu-22.04-server-cloudimg-amd64.img"
-UBUNTU_2404_URL="https://cloud-images.ubuntu.com/releases/lunar/release/ubuntu-24.04-server-cloudimg-amd64.img"
+ALMALINUX_9_URL="https://transfer.oblacno.net/cdn/AlmaLinux-9-GenericCloud-latest.x86_64.qcow2"
+ALMALINUX_8_URL="https://transfer.oblacno.net/cdn/AlmaLinux-8-GenericCloud-latest.x86_64.qcow2"
+UBUNTU_2204_URL="https://transfer.oblacno.net/cdn/ubuntu-22.04-server-cloudimg-amd64.img"
+UBUNTU_2404_URL="https://transfer.oblacno.net/cdn/ubuntu-24.04-server-cloudimg-amd64.img"
 
 # Get user inputs for the VM type, VLAN ID, IP address, and gateway
 read -p "Enter VM type (1 for AlmaLinux 9, 2 for AlmaLinux 8, 3 for Ubuntu 22.04, 4 for Ubuntu 24.04): " VM_TYPE
