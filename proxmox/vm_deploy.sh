@@ -62,7 +62,7 @@ fi
 
 # Import the disk
 echo "Importing disk..."
-qm disk import $VMID ${TEMPLATE_DIR}/${VM_NAME}.${IMAGE_EXT} $STORAGE
+qm disk import $VMID ${TEMPLATE_DIR}/${VM_NAME}.${IMAGE_EXT} $STORAGE --format raw
 if [ $? -ne 0 ]; then
     echo "Failed to import disk. Exiting."
     exit 1
