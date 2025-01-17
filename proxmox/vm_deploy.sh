@@ -37,6 +37,13 @@ else
     exit 1
 fi
 
+# Ensure the template directory exists
+TEMPLATE_DIR="/var/lib/vz/template/images"
+if [ ! -d "$TEMPLATE_DIR" ]; then
+    echo "Template directory does not exist. Creating it..."
+    mkdir -p "$TEMPLATE_DIR"
+fi
+
 # Download the cloud image
 echo "Downloading cloud image..."
 wget -O /var/lib/vz/template/images/${VM_NAME}.${IMAGE_EXT} $IMAGE_URL
