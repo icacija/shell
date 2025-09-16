@@ -11,8 +11,8 @@ echo -e "Disable firewall"
 systemctl stop firewalld
 systemctl disable firewalld
 
-echo -e "Change SSH port to 9001"
-echo "Port 9001" >> /etc/ssh/sshd_config
+echo -e "Change SSH port to 4444"
+echo "Port 4444" >> /etc/ssh/sshd_config
 
 echo -e "Change root color"
 bashrc='/etc/bashrc'
