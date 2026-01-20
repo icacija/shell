@@ -28,6 +28,10 @@ dnf install epel-release -y
 echo -e "HTOP & VNSTAT & FTP & NANO & SCREEN" 
 dnf install htop vnstat ftp nano screen -y
 
+echo -e "History fix"
+echo 'export HISTTIMEFORMAT="%F %T "' >> ~/.bashrc
+source ~/.bashrc
+
 echo -e "Done for now \nPlease reboot"
 
 echo -e "Clean up"
