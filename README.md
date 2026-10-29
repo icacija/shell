@@ -49,7 +49,6 @@ bash postinstall.sh
 | `mysql_bkp.sh` | dnevni dump svih baza u `/backup/db`, čuva 2 dana |
 | `rm_cluster_zones.sh` | backup `/var/named` i micanje zona domena koje nisu na serveru |
 | `securetmp_script.sh` | ponovno kreiranje `/tmp` (`/scripts/securetmp`) uz zaustavljanje servisa |
-| `securetmp10gb.sh` | cPanelov `securetmp` s `/tmp` od 10 GB |
 | `ships.sh` / `ships-new.sh` | priprema cPanel servera za ShipShape (Redis, Imagick, Composer); PHP 7.4 / PHP 8.3 |
 | `uninstall_wttw.sh` | deinstalacija CSF, CSE i CMQ (waytotheweb) |
 
@@ -91,5 +90,4 @@ Aktualni `vm-deploy` se distribuira interno.
 
 ## Licenca
 
-[MIT](LICENSE), osim `cpanel/securetmp10gb.sh` koji je izmijenjena cPanelova skripta i
-podliježe cPanelovoj licenci.
+[MIT](LICENSE)
