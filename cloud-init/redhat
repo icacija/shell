@@ -1,0 +1,6 @@
+#cloud-config
+runcmd:
+  - sed -i "s/#Port 22/Port 4444/" /etc/ssh/sshd_config
+  - systemctl restart sshd
+  - timedatectl set-timezone Europe/Zagreb
+  - sed -i "s/#force_color_prompt=yes/force_color_prompt=yes/" /root/.bashrc
